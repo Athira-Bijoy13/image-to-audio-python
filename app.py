@@ -3,7 +3,7 @@ from imageconvert import finalFunct
 app = Flask(__name__)
 
 @app.route('/',methods=['GET'])
-def hello_world():
+def helloworld():
    return "hello"
 
 @app.route('/convert-text',methods=['GET'])
