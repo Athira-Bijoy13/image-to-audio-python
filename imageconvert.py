@@ -212,13 +212,13 @@ def parseComicSpeechBubbles(croppedImageList, shouldShowImage = False):
 
 
 def finalFunct(a):
-    print(a)
-    image=cv2.imread(a)
-    croppedImgList=segmentPage(image)
-    scriptlist=parseComicSpeechBubbles(croppedImgList)
-    # finalText=remove_duplicate(scriptlist)
-    print(scriptlist)
-    return scriptlist
+    # print(a)
+    # image=cv2.imread(a)
+    # croppedImgList=segmentPage(image)
+    # scriptlist=parseComicSpeechBubbles(croppedImgList)
+    # # finalText=remove_duplicate(scriptlist)
+    # print(scriptlist)
+    return a
 # imageGray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # cv2.imshow('Speech Bubble Identification', imageGray)
 # cv2.waitKey(0)
