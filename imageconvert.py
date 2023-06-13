@@ -11,10 +11,10 @@ from PIL import Image
 
 
 spell = Speller(lang='en')
-
+nltk.download('wordnet')
 def is_spelled_correctly(word):
     # Download the wordnet corpus if not already present
-    nltk.download('wordnet')
+    
 
     # Lemmatize the word to its base form
     lemmatizer = nltk.stem.WordNetLemmatizer()
