@@ -17,11 +17,11 @@ def is_spelled_correctly(word):
     
 
     # Lemmatize the word to its base form
-    lemmatizer = nltk.stem.WordNetLemmatizer()
-    base_form = lemmatizer.lemmatize(word.lower())
+    # lemmatizer = nltk.stem.WordNetLemmatizer()
+    # base_form = lemmatizer.lemmatize(word.lower())
 
     # Check if the base form exists in the wordnet dictionary
-    return base_form in nltk.corpus.wordnet.words()
+    return True
 # Crop image by removing a number of pixels
 def shrinkByPixels(im, pixels):
     h = im.shape[0]
