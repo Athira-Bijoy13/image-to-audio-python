@@ -11,6 +11,7 @@ from autocorrect import Speller
 from PIL import Image
 
 d = enchant.Dict("en_US")
+
 spell = Speller(lang='en')
 
 # Crop image by removing a number of pixels
@@ -215,4 +216,3 @@ def finalFunct(a):
 # imageGray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # cv2.imshow('Speech Bubble Identification', imageGray)
 # cv2.waitKey(0)
-
