@@ -1,8 +1,6 @@
-import sys
-import nltk
+
 import cv2
 import numpy
-import os
 import pytesseract
 import re
 
@@ -12,16 +10,16 @@ from PIL import Image
 
 spell = Speller(lang='en')
 # nltk.download('wordnet')
-def is_spelled_correctly(word):
-    # Download the wordnet corpus if not already present
+# def is_spelled_correctly(word):
+#     # Download the wordnet corpus if not already present
     
 
-    # Lemmatize the word to its base form
-    # lemmatizer = nltk.stem.WordNetLemmatizer()
-    # base_form = lemmatizer.lemmatize(word.lower())
+#     # Lemmatize the word to its base form
+#     lemmatizer = nltk.stem.WordNetLemmatizer()
+#     base_form = lemmatizer.lemmatize(word.lower())
 
-    # Check if the base form exists in the wordnet dictionary
-    return True
+#     # Check if the base form exists in the wordnet dictionary
+#     return True
 # Crop image by removing a number of pixels
 def shrinkByPixels(im, pixels):
     h = im.shape[0]
@@ -129,7 +127,7 @@ def processScript(script):
     words = script.split()
     for i in range(0, len(words)):
         # Spellcheck all words
-        if not is_spelled_correctly(words[i]):
+        if not True:
             alphaWord = ''.join([j for j in words[i] if j.isalpha()])
             if alphaWord and not is_spelled_correctly(alphaWord):
                 words[i]=spell(words[i].lower()).upper()
@@ -224,4 +222,3 @@ def finalFunct(a):
 # imageGray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # cv2.imshow('Speech Bubble Identification', imageGray)
 # cv2.waitKey(0)
-finalFunct('D:/College of Engineering Trivandrum/interships/book/comic-backend/images/1686308827314-r.png')
