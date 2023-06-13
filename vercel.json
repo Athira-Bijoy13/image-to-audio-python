@@ -6,12 +6,6 @@
             "use": "@vercel/python"
         }
     ],
-    "build":{
-        "env":{
-            "PYTHONUNBUFFERED": "1", 
-            "PYENCHANT_LIBRARY_PATH":"/usr/local/lib/libenchant.so"
-        }
-    },
     "routes": [
         {
             "src": "/(.*)",
