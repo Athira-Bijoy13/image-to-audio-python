@@ -11,7 +11,7 @@ from PIL import Image
 
 
 spell = Speller(lang='en')
-nltk.download('wordnet')
+# nltk.download('wordnet')
 def is_spelled_correctly(word):
     # Download the wordnet corpus if not already present
     
