@@ -1,5 +1,4 @@
 flask==2.3.2
-numpy
-opencv-python   
+numpy   
 pytesseract==0.3.2
 nltk==3.8.1
