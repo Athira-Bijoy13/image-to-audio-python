@@ -7,20 +7,15 @@ import re
 
 from autocorrect import Speller
 from PIL import Image
-
+from spellchecker import SpellChecker
 
 spell = Speller(lang='en')
 # nltk.download('wordnet')
 def is_spelled_correctly(word):
-    # Download the wordnet corpus if not already present
-    
+    spell = SpellChecker()
 
-    # Lemmatize the word to its base form
-    lemmatizer = nltk.stem.WordNetLemmatizer()
-    base_form = lemmatizer.lemmatize(word.lower())
-
-    # Check if the base form exists in the wordnet dictionary
-    return True
+    # Check if the word is in the dictionary
+    return spell.correction(word) == word
 # Crop image by removing a number of pixels
 def shrinkByPixels(im, pixels):
     h = im.shape[0]
