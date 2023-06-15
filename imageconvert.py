@@ -1,5 +1,3 @@
-
-import nltk
 import cv2
 import numpy
 import pytesseract
