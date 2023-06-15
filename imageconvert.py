@@ -2,7 +2,6 @@ import cv2
 import numpy
 import pytesseract
 import re
-
 from autocorrect import Speller
 from PIL import Image
 from spellchecker import SpellChecker
