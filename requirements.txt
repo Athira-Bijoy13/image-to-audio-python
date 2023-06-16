@@ -4,3 +4,4 @@ pytesseract==0.3.2
 numpy
 autocorrect
 pyspellchecker
+requests
