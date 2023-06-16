@@ -1,4 +1,6 @@
 import cv2
+import urllib.request
+from PIL import Image
 import numpy
 import pytesseract
 import re
@@ -189,27 +191,29 @@ def parseComicSpeechBubbles(croppedImageList, shouldShowImage = False):
 
     return scriptList
 
-# def remove_duplicate(strings):
-#     filtered_strings = set()
-#     for string in strings:
-#         substrings = set()
-#         result = ''
-#         for char in string:
-#             result += char
-#             substrings.add(char)
-#             if result in substrings:
-#                 substrings.remove(result)
-#                 result = ''
-#         filtered_strings.add(result)
-#     return filtered_strings
+def remove_duplicate(strings):
+    filtered_strings = set()
+    for string in strings:
+        substrings = set()
+        result = ''
+        for char in string:
+            result += char
+            substrings.add(char)
+            if result in substrings:
+                substrings.remove(result)
+                result = ''
+        filtered_strings.add(result)
+    return filtered_strings
 
 
 def finalFunct(a):
     print(a)
-    image=cv2.imread(a)
+    urllib.request.urlretrieve(a,"gfg.png")
+  
+    img = Image.open("gfg.png")
+    image=numpy.array(img)
     croppedImgList=segmentPage(image)
     scriptlist=parseComicSpeechBubbles(croppedImgList)
-    # finalText=remove_duplicate(scriptlist)
     print(scriptlist)
     return scriptlist
 # imageGray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

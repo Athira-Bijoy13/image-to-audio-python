@@ -10,7 +10,8 @@ def helloworld():
 def hello_world():
    print(request.args.get("name"))
    a=finalFunct(request.args.get("name"))
-   return a
+   b={"data":a}
+   return b
 
 if __name__ == '__main__':
    app.run()
