@@ -8,7 +8,6 @@ import re
 from autocorrect import Speller
 from PIL import Image
 from spellchecker import SpellChecker
-pytesseract.pytesseract.tesseract_cmd = r'./Tesseract-OCR/tesseract.exe'
 spell = Speller(lang='en')
 # nltk.download('wordnet')
 def is_spelled_correctly(word):
