@@ -1,5 +1,6 @@
 import cv2
-import urllib.request
+import requests
+from io import BytesIO
 from PIL import Image
 import numpy
 import pytesseract
@@ -208,9 +209,8 @@ def remove_duplicate(strings):
 
 def finalFunct(a):
     print(a)
-    urllib.request.urlretrieve(a,"gfg.png")
-  
-    img = Image.open("gfg.png")
+    response = requests.get(a)
+    img=Image.open(BytesIO(response.content))
     image=numpy.array(img)
     croppedImgList=segmentPage(image)
     scriptlist=parseComicSpeechBubbles(croppedImgList)
