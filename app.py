@@ -1,9 +1,13 @@
 from flask import Flask, request
 from imageconvert import finalFunct
+import os
+
 app = Flask(__name__)
 
+print(os.getcwd()+"\\Tesseract-OCR\\tesseract.exe'")
 @app.route('/',methods=['GET'])
 def helloworld():
+   
    return "hello"
 
 @app.route('/convert-text',methods=['GET'])
